@@ -26,7 +26,7 @@ pip install pyttsx3
 ```
 3. Run the application:
 ```
-python chatbot.py
+python main.py
 ```
 
 ## Project background
