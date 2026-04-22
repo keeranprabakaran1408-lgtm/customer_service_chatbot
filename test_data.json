@@ -1,0 +1,72 @@
+{
+  "test_data": [
+    {
+      "type_of_test_data": "greeting",
+      "similar_inputs": [
+        "Hi",
+        "Hey",
+        "How are you",
+        "Is anyone there?",
+        "Hello"
+      ],
+      "responses": [
+        "Hey",
+        "Hello, you alright",
+        "Hi there, what can I do for you?",
+        "Hi there, how can I help?"
+      ]
+    },
+    {
+      "type_of_test_data": "goodbye",
+      "similar_inputs": ["Bye", "See you later", "Goodbye"],
+      "responses": [
+        "See you later, thanks for responding",
+        "Bye Come back when I'm needed again."
+      ]
+    },
+    {
+      "type_of_test_data": "thanks",
+      "similar_inputs": ["Thanks", "Thank you", "Thank's a lot!"],
+      "responses": ["Happy to help!", "Any time!", "My pleasure"]
+    },
+    {
+      "type_of_test_data": "products",
+      "similar_inputs": [
+        "Which products do you have?",
+        "What kind of products do you sell??",
+        "What do you sell?"
+      ],
+      "responses": [
+        "We sell a range of products ranging from electronics to insurance",
+        "The products that we sell can be viewed on the company website linked here"
+      ]
+    },
+    {
+      "type_of_test_data": "payments",
+      "similar_inputs": [
+        "Do you take credit cards?",
+        "Do you accept Klarna?",
+        "Can I pay with Paypal?"
+      ],
+      "responses": [
+        "We accept VISA, Paypal and Klarna (dependent on the price of the product)",
+        "We accept most major credit cards, Klarna and Paypal"
+      ]
+    },
+    {
+      "type_of_test_data": "delivery",
+      "similar_inputs": [
+        "How long will it take for my order to arrive?",
+        "How long does shipping take?",
+        "When do I get my delivery?"
+      ],
+      "responses": [
+        "Standard delivery usually takes 3-5 business days or premium delivery would take up to 2 business days",
+        "Can I take your order number?"
+      ]
+    }
+
+
+
+  ]
+}
