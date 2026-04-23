@@ -1,34 +1,50 @@
 # customer_service_chatbot
-A customer service chatbot application built in Python, developed as an A-level Computer Science project.
+A customer service chatbot I built in Python for my A-level Computer Science project. It uses a neural network I trained from scratch to understand and respond to customer queries.
 
 ## What it does
 
-- Provides a graphical user interface (GUI) for customers to interact with a business chatbot
-- User authentication system with sign-up and login functionality, including password validation and account lockout after repeated failed attempts
-- Generates automated human-like audio responses to customer queries via text-to-speech
-- Speech-to-text button allowing users to speak their query directly into the chatbot
-- Custom on-screen keyboard for text input within the GUI
-- Stores conversation history with dates so users can review previous interactions
-- File/database storage for usernames, passwords, automated responses and conversation logs
+- Built and trained a 3-layer neural network using PyTorch to classify customer queries
+- Used NLTK for tokenization and stemming to process user input before passing it to the model
+- Trained the model using a bag of words approach with cross entropy loss over 1000 epochs
+- Saves the trained model to a file so it doesn't need retraining every time it runs
+- Pygame GUI with a chat window, input box and send button
+- Uses Microsoft's DialoGPT model to generate responses
+- Responds with confidence — if the model isn't confident enough (below 75%) it asks the user to rephrase
+
+## Files
+
+- `model_for_chatbot.py` — defines the 3-layer neural network architecture
+- `train_model.py` — trains the model on the dataset and saves it to `data.pth`
+- `nltk_file.py` — handles tokenization, stemming and bag of words
+- `user_interface.py` — loads the trained model and runs the chatbot in the terminal
+- `chatbot.py` — Pygame GUI version of the chatbot
+- `test_data.json` — the dataset used to train the model (not included)
 
 ## Built with
 
 - Python
-- Pytorch
+- PyTorch
+- NLTK
+- Pygame
+- Transformers
+- NumPy
 
 ## How to run
 
-1. Make sure Python is installed — download from https://www.python.org
+1. Make sure Python is installed — https://www.python.org
 2. Install the required libraries:
 ```
-pip install pygame
-pip install pyttsx3
+pip install pygame torch transformers nltk numpy
 ```
-3. Run the application:
+3. Train the model first:
 ```
-python main.py
+python train_model.py
 ```
-
-## Project background
-
-Built for a fictional client (a small electronics business) as part of an A-level Computer Science project. Designed and tested using a modular programming approach with client reviews and usability testing throughout development.
+4. Then run the chatbot:
+```
+python user_interface.py
+```
+Or for the GUI version:
+```
+python chatbot.py
+```
